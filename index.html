@@ -16,7 +16,6 @@
             scroll-behavior: smooth; 
         }
         
-       
         .text-noir-gray { color: #a1a1aa; } 
         .text-noir-dim { color: #52525b; }
 
@@ -38,7 +37,6 @@
             color: #000000;
         }
 
-     
         .fade-in { animation: fadeIn 1.2s ease-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
@@ -89,9 +87,39 @@
     </section>
 
     <footer id="contato" class="py-32 px-8 md:px-24 border-t border-white/5 bg-black">
-        <div class="max-w-4xl mx-auto text-center">
-             <h2 class="text-4xl md:text-6xl font-black mb-16 uppercase text-zinc-100">Fale <span class="text-zinc-600">Comigo</span></h2>
-             <a href="mailto:seuemail@exemplo.com" class="border border-white/20 px-12 py-6 text-xs uppercase tracking-widest hover:bg-white hover:text-black transition duration-500">Enviar E-mail</a>
+        <div class="max-w-4xl mx-auto">
+            <p class="text-zinc-500 uppercase tracking-widest text-[10px] mb-8 font-bold text-center">Vamos conectar?</p>
+            <h2 class="text-4xl md:text-6xl font-black mb-16 uppercase text-center text-zinc-100">Fale <span class="text-zinc-600">Comigo</span></h2>
+
+            <form action="https://formspree.io/f/xdalbryz" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mb-20">
+                <div class="flex flex-col">
+                    <label class="text-[10px] uppercase text-zinc-400 mb-2 ml-1 font-bold">Nome</label>
+                    <input type="text" name="name" required placeholder="Seu nome" 
+                        class="bg-white/5 border border-white/10 rounded-sm p-4 text-white focus:outline-none focus:border-white transition placeholder:text-zinc-700">
+                </div>
+
+                <div class="flex flex-col">
+                    <label class="text-[10px] uppercase text-zinc-400 mb-2 ml-1 font-bold">E-mail</label>
+                    <input type="email" name="_replyto" required placeholder="seu@email.com" 
+                        class="bg-white/5 border border-white/10 rounded-sm p-4 text-white focus:outline-none focus:border-white transition placeholder:text-zinc-700">
+                </div>
+
+                <div class="flex flex-col md:col-span-2">
+                    <label class="text-[10px] uppercase text-zinc-400 mb-2 ml-1 font-bold">Mensagem</label>
+                    <textarea name="message" required rows="4" placeholder="Como posso ajudar em sua infraestrutura?" 
+                        class="bg-white/5 border border-white/10 rounded-sm p-4 text-white focus:outline-none focus:border-white transition placeholder:text-zinc-700"></textarea>
+                </div>
+
+                <button type="submit" 
+                    class="md:col-span-2 bg-white text-black hover:bg-zinc-300 font-bold py-4 rounded-sm transition uppercase tracking-widest text-xs">
+                    Enviar Mensagem
+                </button>
+            </form>
+
+            <div class="mt-20 flex justify-center space-x-12 opacity-50 text-[10px] uppercase tracking-[0.4em]">
+                <a href="https://www.linkedin.com/in/gabrielly-goncalves007" target="_blank" class="hover:text-white transition">LinkedIn</a>
+                <a href="https://github.com/Gabrielly77" target="_blank" class="hover:text-white transition">GitHub</a>
+            </div>
         </div>
     </footer>
 
