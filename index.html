@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gabrielly Gonçalves | Cloud & Security</title>
     
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
     
@@ -20,43 +22,67 @@
             background: linear-gradient(180deg, #141414 0%, #0a0a0a 100%);
         }
 
-        /* Efeito de Gradiente no Menu ao passar o mouse */
+        /* Efeito de Gradiente no Menu com cores correspondentes */
         .nav-link-gradient {
             transition: all 0.3s ease;
-            padding: 6px 10px;
+            padding: 6px 12px;
             border-radius: 4px;
         }
-        .nav-link-gradient:hover {
-            background: linear-gradient(90deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 100%);
-            color: #ffffff !important;
+        /* Cores individuais no hover do menu */
+        .link-sobre:hover { color: #ef4444 !important; background: rgba(239, 68, 68, 0.05); }
+        .link-exp:hover { color: #3b82f6 !important; background: rgba(59, 130, 246, 0.05); }
+        .link-galeria:hover { color: #10b981 !important; background: rgba(16, 185, 129, 0.05); }
+
+        /* Botão Voltar ao Topo */
+        #backToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: 0.3s;
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
         }
+        #backToTop.show { opacity: 1; visibility: visible; }
+        #backToTop:hover { background: white; color: black; transform: translateY(-5px); }
 
         .skill-tag {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 4px 12px;
-            border-radius: 2px;
+            border-radius: 4px;
             font-size: 11px;
             transition: 0.3s;
-        }
-        .skill-tag:hover {
-            background: #ffffff;
-            color: #000000;
+            color: #d1d5db;
         }
 
-        .fade-in { animation: fadeIn 1.2s ease-out; }
+        .fade-in { animation: fadeIn 1.5s ease-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body class="antialiased">
 
+    <button id="backToTop" onclick="window.scrollTo(0, 0)">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+    </button>
+
     <nav class="fixed top-0 w-full z-50 flex justify-between items-center p-8 uppercase tracking-widest text-[10px] md:text-xs bg-black/95 backdrop-blur-md border-b border-white/10">
-        <span class="text-zinc-400">Belo Horizonte, MG</span>
-        <div class="space-x-4 flex items-center">
-            <a href="#sobre" class="nav-link-gradient text-zinc-400">Sobre</a>
-            <a href="#experiencia" class="nav-link-gradient text-zinc-400">Experiência</a>
-            <a href="#pixelart" class="nav-link-gradient text-zinc-400">Galeria</a>
-            <a href="#contato" class="nav-link-gradient text-zinc-400 font-bold">Contato</a>
+        <span class="text-zinc-500">Belo Horizonte, MG</span>
+        <div class="space-x-2 flex items-center">
+            <a href="#sobre" class="nav-link-gradient link-sobre text-zinc-400">Sobre</a>
+            <a href="#experiencia" class="nav-link-gradient link-exp text-zinc-400">Experiência</a>
+            <a href="#pixelart" class="nav-link-gradient link-galeria text-zinc-400">Galeria</a>
+            <a href="#contato" class="nav-link-gradient text-zinc-100 font-bold uppercase">Contato</a>
         </div>
     </nav>
 
@@ -64,102 +90,105 @@
         <h1 class="text-6xl md:text-9xl font-black leading-none tracking-tighter mb-6 uppercase">
             GABRIELLY<br><span class="text-zinc-600">GONÇALVES</span>
         </h1>
-        <p class="text-zinc-300 text-lg md:text-xl max-w-3xl font-light leading-relaxed">
+        <p class="text-zinc-400 text-lg md:text-xl max-w-3xl font-light leading-relaxed">
             AWS Certified | Cloud & DevOps Specialist | Facilitadora Google Cloud Arcade 2026. <br>
-            Defesa cibernética no <span class="text-red-600 border-b border-red-900 font-medium">Hackers do Bem</span>.
+            Defesa cibernética no <span class="text-red-500 border-b border-red-500/30 font-bold">Hackers do Bem</span>.
         </p>
     </header>
 
-    <section id="sobre" class="py-32 px-8 md:px-24 border-t border-red-900/20">
+    <section id="sobre" class="py-32 px-8 md:px-24 border-t border-red-500/10">
         <div class="grid md:grid-cols-2 gap-16">
             <div>
-                <h2 class="uppercase tracking-[0.2em] text-xs text-red-600 mb-10 font-bold">Resumo</h2>
+                <h2 class="uppercase tracking-[0.2em] text-xs text-red-500 mb-10 font-bold">Resumo Profissional</h2>
                 <p class="text-3xl md:text-4xl leading-tight font-light text-zinc-100">
                     Construindo infraestruturas seguras com o rigor de QA e a estética do Noir Design.
                 </p>
-                <div class="mt-10 p-6 border-l-2 border-red-600 bg-red-900/5">
+                <div class="mt-10 p-6 border-l-2 border-red-500 bg-red-500/5">
                     <h3 class="text-red-500 font-bold uppercase text-xs tracking-widest mb-2">Hackers do Bem</h3>
-                    <p class="text-zinc-400 text-sm">Formação em Cibersegurança pelo programa do Governo Federal (MCTI/RNP).</p>
+                    <p class="text-zinc-400 text-sm">Formação em Cibersegurança pelo programa do Governo Federal (MCTI/RNP), focada em defesa e criptografia.</p>
                 </div>
             </div>
-            <div class="space-y-8">
-                <div class="grid grid-cols-2 gap-8">
+            <div class="text-zinc-400 space-y-8">
+                <div class="grid grid-cols-2 gap-8 pt-4">
                     <div>
-                        <p class="text-[10px] uppercase tracking-widest text-red-900 mb-3 font-bold">Tech Stack</p>
+                        <p class="text-[10px] uppercase tracking-widest text-red-500/50 mb-3">Idiomas</p>
+                        <p class="text-zinc-100 text-sm font-medium">Português / Inglês</p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-widest text-red-500/50 mb-3">Top Skills</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="skill-tag border-red-900/30">AWS</span>
-                            <span class="skill-tag border-red-900/30">Python</span>
-                            <span class="skill-tag border-red-900/30">DevSecOps</span>
+                            <span class="skill-tag hover:border-red-500 hover:text-red-500">AWS</span>
+                            <span class="skill-tag hover:border-red-500 hover:text-red-500">Python</span>
                         </div>
                     </div>
                 </div>
-                <a href="https://www.credly.com/users/gabrielly-goncalves" target="_blank" class="inline-block border border-red-900/40 px-8 py-4 text-[10px] uppercase tracking-[0.3em] hover:bg-red-600 hover:text-white transition-all duration-500">
+                <a href="https://www.credly.com/users/gabrielly-goncalves" target="_blank" class="inline-block border border-red-500/20 px-8 py-4 text-[10px] uppercase tracking-[0.3em] hover:bg-red-500 hover:text-white transition-all">
                     Ver Certificações Credly
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="experiencia" class="py-32 px-8 md:px-24 bg-[#080808] border-t border-blue-900/20">
+    <section id="experiencia" class="py-32 px-8 md:px-24 bg-[#080808] border-t border-blue-500/10">
         <h2 class="uppercase tracking-[0.2em] text-xs text-blue-500 mb-16 font-bold">Trajetória</h2>
-        <div class="space-y-12">
-            <div class="flex justify-between border-b border-blue-900/10 pb-8">
+        <div class="space-y-16">
+            <div class="flex flex-col md:flex-row justify-between border-b border-blue-500/5 pb-12 group">
                 <div>
-                    <h3 class="text-xl font-bold uppercase text-zinc-100">Keywords Studios</h3>
-                    <p class="text-blue-400/60">QA Game Tester</p>
+                    <h3 class="text-2xl font-bold uppercase group-hover:text-blue-400 transition">Keywords Studios</h3>
+                    <p class="text-zinc-500">QA Game Tester</p>
                 </div>
-                <span class="text-xs text-zinc-700 uppercase font-mono tracking-tighter">2026 — Presente</span>
+                <span class="text-xs text-blue-900 font-mono">2026 — Presente</span>
             </div>
-            <div class="flex justify-between border-b border-blue-900/10 pb-8">
+            <div class="flex flex-col md:flex-row justify-between border-b border-blue-500/5 pb-12 group">
                 <div>
-                    <h3 class="text-xl font-bold uppercase text-zinc-100">Google Cloud Arcade</h3>
-                    <p class="text-blue-400/60">Facilitadora</p>
+                    <h3 class="text-2xl font-bold uppercase group-hover:text-blue-400 transition">Google Cloud Arcade</h3>
+                    <p class="text-zinc-500">Facilitadora</p>
                 </div>
-                <span class="text-xs text-zinc-700 uppercase font-mono tracking-tighter">2025</span>
+                <span class="text-xs text-blue-900 font-mono">2025</span>
             </div>
         </div>
     </section>
 
-    <section id="pixelart" class="py-32 px-8 md:px-24 border-t border-green-900/20">
-        <h2 class="uppercase tracking-[0.2em] text-xs text-green-500 mb-16 font-bold">Galeria Pixel Art</h2>
+    <section id="pixelart" class="py-32 px-8 md:px-24 border-t border-emerald-500/10">
+        <h2 class="uppercase tracking-[0.2em] text-xs text-emerald-500 mb-16 font-bold">Galeria Pixel Art</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="aspect-square bg-zinc-900 overflow-hidden border border-green-900/10 transition duration-500 grayscale hover:grayscale-0">
+            <div class="aspect-square bg-zinc-900 overflow-hidden pixel-card hover:border-emerald-500/50">
                 <img src="img/olho.png" alt="Pixel Art 1" class="w-full h-full object-cover">
             </div>
-            <div class="aspect-square bg-zinc-900 overflow-hidden border border-green-900/10 transition duration-500 grayscale hover:grayscale-0">
+            <div class="aspect-square bg-zinc-900 overflow-hidden pixel-card hover:border-emerald-500/50">
                 <img src="img/zoi.png" alt="Pixel Art 2" class="w-full h-full object-cover">
             </div>
-            <div class="aspect-square bg-zinc-900 overflow-hidden border border-green-900/10 transition duration-500 grayscale hover:grayscale-0">
+            <div class="aspect-square bg-zinc-900 overflow-hidden pixel-card hover:border-emerald-500/50">
                 <img src="img/ghost.png" alt="Pixel Art 3" class="w-full h-full object-cover">
             </div>
-            <div class="aspect-square bg-zinc-900 overflow-hidden border border-green-900/10 transition duration-500 grayscale hover:grayscale-0">
+            <div class="aspect-square bg-zinc-900 overflow-hidden pixel-card hover:border-emerald-500/50">
                 <img src="img/cat.png" alt="Pixel Art 4" class="w-full h-full object-cover">
             </div>
         </div>
     </section>
 
     <footer id="contato" class="py-32 px-8 md:px-24 border-t border-white/5 bg-black">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl md:text-6xl font-black mb-16 uppercase text-center text-zinc-100">Fale <span class="text-zinc-600">Comigo</span></h2>
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-zinc-500 uppercase tracking-widest text-[10px] mb-8 font-bold">Vamos conectar?</p>
+            <h2 class="text-4xl md:text-6xl font-black mb-16 uppercase text-zinc-100">Fale <span class="text-zinc-500 underline decoration-zinc-800 underline-offset-8">Comigo</span></h2>
 
-            <form action="https://formspree.io/f/xdalbryz" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+            <form action="https://formspree.io/f/xdalbryz" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mb-20">
                 <div class="flex flex-col">
-                    <label class="text-[10px] uppercase text-zinc-500 mb-2 font-bold ml-1">Nome</label>
-                    <input type="text" name="name" placeholder="Seu nome" required 
+                    <label class="text-[10px] uppercase text-zinc-500 mb-2 ml-1 font-bold">Nome</label>
+                    <input type="text" name="name" required placeholder="Seu nome" 
                         class="bg-white/5 border border-white/10 p-4 text-white focus:outline-none focus:border-white transition">
                 </div>
                 <div class="flex flex-col">
-                    <label class="text-[10px] uppercase text-zinc-500 mb-2 font-bold ml-1">E-mail</label>
-                    <input type="email" name="_replyto" placeholder="seu@email.com" required 
+                    <label class="text-[10px] uppercase text-zinc-500 mb-2 ml-1 font-bold">E-mail</label>
+                    <input type="email" name="_replyto" required placeholder="seu@email.com" 
                         class="bg-white/5 border border-white/10 p-4 text-white focus:outline-none focus:border-white transition">
                 </div>
                 <div class="flex flex-col md:col-span-2">
-                    <label class="text-[10px] uppercase text-zinc-500 mb-2 font-bold ml-1">Mensagem</label>
-                    <textarea name="message" rows="4" placeholder="Como posso ajudar?" required 
+                    <label class="text-[10px] uppercase text-zinc-500 mb-2 ml-1 font-bold">Mensagem</label>
+                    <textarea name="message" required rows="4" placeholder="Como posso ajudar?" 
                         class="bg-white/5 border border-white/10 p-4 text-white focus:outline-none focus:border-white transition"></textarea>
                 </div>
-                <button type="submit" 
-                    class="md:col-span-2 bg-white text-black font-bold py-4 uppercase tracking-widest text-xs hover:bg-zinc-300 transition duration-500">
+                <button type="submit" class="md:col-span-2 bg-white text-black font-bold py-4 uppercase tracking-widest text-xs hover:bg-zinc-300 transition">
                     Enviar Mensagem
                 </button>
             </form>
@@ -171,5 +200,16 @@
         </div>
     </footer>
 
+    <script>
+        // Script para mostrar a setinha ao descer o scroll
+        const btn = document.getElementById('backToTop');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+                btn.classList.add('show');
+            } else {
+                btn.classList.remove('show');
+            }
+        };
+    </script>
 </body>
 </html>
