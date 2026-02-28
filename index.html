@@ -22,16 +22,16 @@
             background: linear-gradient(180deg, #141414 0%, #0a0a0a 100%);
         }
 
-        /* Efeito de Gradiente no Menu com cores correspondentes */
+        /* Cores individuais no hover do menu */
         .nav-link-gradient {
             transition: all 0.3s ease;
             padding: 6px 12px;
             border-radius: 4px;
         }
-        /* Cores individuais no hover do menu */
         .link-sobre:hover { color: #ef4444 !important; background: rgba(239, 68, 68, 0.05); }
         .link-exp:hover { color: #3b82f6 !important; background: rgba(59, 130, 246, 0.05); }
         .link-galeria:hover { color: #10b981 !important; background: rgba(16, 185, 129, 0.05); }
+        .link-contato:hover { color: #a855f7 !important; background: rgba(168, 85, 247, 0.05); }
 
         /* Botão Voltar ao Topo */
         #backToTop {
@@ -82,7 +82,7 @@
             <a href="#sobre" class="nav-link-gradient link-sobre text-zinc-400">Sobre</a>
             <a href="#experiencia" class="nav-link-gradient link-exp text-zinc-400">Experiência</a>
             <a href="#pixelart" class="nav-link-gradient link-galeria text-zinc-400">Galeria</a>
-            <a href="#contato" class="nav-link-gradient text-zinc-100 font-bold uppercase">Contato</a>
+            <a href="#contato" class="nav-link-gradient link-contato text-zinc-100 font-bold uppercase">Contato</a>
         </div>
     </nav>
 
@@ -105,20 +105,25 @@
                 </p>
                 <div class="mt-10 p-6 border-l-2 border-red-500 bg-red-500/5">
                     <h3 class="text-red-500 font-bold uppercase text-xs tracking-widest mb-2">Hackers do Bem</h3>
-                    <p class="text-zinc-400 text-sm">Formação em Cibersegurança pelo programa do Governo Federal (MCTI/RNP), focada em defesa e criptografia.</p>
+                    <p class="text-zinc-400 text-sm">Formação em Cibersegurança focado em defesa e criptografia (MCTI/RNP).</p>
                 </div>
             </div>
             <div class="text-zinc-400 space-y-8">
                 <div class="grid grid-cols-2 gap-8 pt-4">
                     <div>
-                        <p class="text-[10px] uppercase tracking-widest text-red-500/50 mb-3">Idiomas</p>
-                        <p class="text-zinc-100 text-sm font-medium">Português / Inglês</p>
+                        <p class="text-[10px] uppercase tracking-widest text-red-500/50 mb-3 font-bold">Idiomas</p>
+                        <p class="text-zinc-100 text-sm font-medium">Português (Nativo)</p>
+                        <p class="text-zinc-100 text-sm font-medium">Inglês (Profissional)</p>
                     </div>
                     <div>
-                        <p class="text-[10px] uppercase tracking-widest text-red-500/50 mb-3">Top Skills</p>
+                        <p class="text-[10px] uppercase tracking-widest text-red-500/50 mb-3 font-bold">Skills em Foco</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="skill-tag hover:border-red-500 hover:text-red-500">AWS</span>
+                            <span class="skill-tag hover:border-red-500 hover:text-red-500">AWS Cloud</span>
                             <span class="skill-tag hover:border-red-500 hover:text-red-500">Python</span>
+                            <span class="skill-tag hover:border-red-500 hover:text-red-500">Linux Kali</span>
+                            <span class="skill-tag hover:border-red-500 hover:text-red-500">FinOps</span>
+                            <span class="skill-tag hover:border-red-500 hover:text-red-500">Cybersecurity</span>
+                            <span class="skill-tag hover:border-red-500 hover:text-red-500">QA</span>
                         </div>
                     </div>
                 </div>
@@ -152,56 +157,55 @@
     <section id="pixelart" class="py-32 px-8 md:px-24 border-t border-emerald-500/10">
         <h2 class="uppercase tracking-[0.2em] text-xs text-emerald-500 mb-16 font-bold">Galeria Pixel Art</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="aspect-square bg-zinc-900 overflow-hidden pixel-card hover:border-emerald-500/50">
+            <div class="aspect-square bg-zinc-900 overflow-hidden border border-white/5 transition duration-500 grayscale hover:grayscale-0 hover:border-emerald-500">
                 <img src="img/olho.png" alt="Pixel Art 1" class="w-full h-full object-cover">
             </div>
-            <div class="aspect-square bg-zinc-900 overflow-hidden pixel-card hover:border-emerald-500/50">
+            <div class="aspect-square bg-zinc-900 overflow-hidden border border-white/5 transition duration-500 grayscale hover:grayscale-0 hover:border-emerald-500">
                 <img src="img/zoi.png" alt="Pixel Art 2" class="w-full h-full object-cover">
             </div>
-            <div class="aspect-square bg-zinc-900 overflow-hidden pixel-card hover:border-emerald-500/50">
+            <div class="aspect-square bg-zinc-900 overflow-hidden border border-white/5 transition duration-500 grayscale hover:grayscale-0 hover:border-emerald-500">
                 <img src="img/ghost.png" alt="Pixel Art 3" class="w-full h-full object-cover">
             </div>
-            <div class="aspect-square bg-zinc-900 overflow-hidden pixel-card hover:border-emerald-500/50">
+            <div class="aspect-square bg-zinc-900 overflow-hidden border border-white/5 transition duration-500 grayscale hover:grayscale-0 hover:border-emerald-500">
                 <img src="img/cat.png" alt="Pixel Art 4" class="w-full h-full object-cover">
             </div>
         </div>
     </section>
 
-    <footer id="contato" class="py-32 px-8 md:px-24 border-t border-white/5 bg-black">
+    <footer id="contato" class="py-32 px-8 md:px-24 border-t border-purple-500/10 bg-black">
         <div class="max-w-4xl mx-auto text-center">
-            <p class="text-zinc-500 uppercase tracking-widest text-[10px] mb-8 font-bold">Vamos conectar?</p>
-            <h2 class="text-4xl md:text-6xl font-black mb-16 uppercase text-zinc-100">Fale <span class="text-zinc-500 underline decoration-zinc-800 underline-offset-8">Comigo</span></h2>
+            <p class="text-purple-500 uppercase tracking-widest text-[10px] mb-8 font-bold">Vamos conectar?</p>
+            <h2 class="text-4xl md:text-6xl font-black mb-16 uppercase text-zinc-100">Fale <span class="text-purple-600 underline decoration-purple-900 underline-offset-8">Comigo</span></h2>
 
             <form action="https://formspree.io/f/xdalbryz" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mb-20">
                 <div class="flex flex-col">
                     <label class="text-[10px] uppercase text-zinc-500 mb-2 ml-1 font-bold">Nome</label>
                     <input type="text" name="name" required placeholder="Seu nome" 
-                        class="bg-white/5 border border-white/10 p-4 text-white focus:outline-none focus:border-white transition">
+                        class="bg-white/5 border border-white/10 p-4 text-white focus:outline-none focus:border-purple-500 transition">
                 </div>
                 <div class="flex flex-col">
                     <label class="text-[10px] uppercase text-zinc-500 mb-2 ml-1 font-bold">E-mail</label>
                     <input type="email" name="_replyto" required placeholder="seu@email.com" 
-                        class="bg-white/5 border border-white/10 p-4 text-white focus:outline-none focus:border-white transition">
+                        class="bg-white/5 border border-white/10 p-4 text-white focus:outline-none focus:border-purple-500 transition">
                 </div>
                 <div class="flex flex-col md:col-span-2">
                     <label class="text-[10px] uppercase text-zinc-500 mb-2 ml-1 font-bold">Mensagem</label>
-                    <textarea name="message" required rows="4" placeholder="Como posso ajudar?" 
-                        class="bg-white/5 border border-white/10 p-4 text-white focus:outline-none focus:border-white transition"></textarea>
+                    <textarea name="message" required rows="4" placeholder="Como posso ajudar em sua infraestrutura?" 
+                        class="bg-white/5 border border-white/10 p-4 text-white focus:outline-none focus:border-purple-500 transition"></textarea>
                 </div>
-                <button type="submit" class="md:col-span-2 bg-white text-black font-bold py-4 uppercase tracking-widest text-xs hover:bg-zinc-300 transition">
+                <button type="submit" class="md:col-span-2 bg-purple-600 text-white font-bold py-4 uppercase tracking-widest text-xs hover:bg-purple-700 transition duration-500">
                     Enviar Mensagem
                 </button>
             </form>
 
             <div class="mt-20 flex justify-center space-x-12 opacity-50 text-[10px] uppercase tracking-[0.4em]">
-                <a href="https://www.linkedin.com/in/gabrielly-goncalves007" target="_blank" class="hover:text-white transition">LinkedIn</a>
-                <a href="https://github.com/Gabrielly77" target="_blank" class="hover:text-white transition">GitHub</a>
+                <a href="https://www.linkedin.com/in/gabrielly-goncalves007" target="_blank" class="hover:text-purple-500 transition">LinkedIn</a>
+                <a href="https://github.com/Gabrielly77" target="_blank" class="hover:text-purple-500 transition">GitHub</a>
             </div>
         </div>
     </footer>
 
     <script>
-        // Script para mostrar a setinha ao descer o scroll
         const btn = document.getElementById('backToTop');
         window.onscroll = function() {
             if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
